@@ -17,7 +17,8 @@ spring:
             database: MongoAccounts
 
 eureka:
-    hostname: localhost
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:8099/eureka/
-    prefer-ip-address: true
+    client:
+        hostname: localhost
+        serviceUrl:
+            defaultZone: http://${eureka.instance.hostname}:8099/eureka/
+        

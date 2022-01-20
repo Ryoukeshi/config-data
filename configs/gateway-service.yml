@@ -3,9 +3,9 @@ server:
 
 eureka:
   client:
+    hostname: localhost
     serviceUrl:
       defaultZone: http://localhost:8099/eureka/
-    prefer-ip-address: true
 
 spring:
   cloud:
