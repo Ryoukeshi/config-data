@@ -5,6 +5,19 @@ server:
         include-binding-errors: always
         
 spring:
+    application:
+        name: bootcamp-client
     h2:
         console:
             enabled: true
+    data:
+        mongodb:
+            uri: mongodb://host:127.0.0.1/db
+            host: localhost
+            database: MongoClients
+
+eureka:
+    hostname: localhost
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8099/eureka/
+    prefer-ip-address: true
