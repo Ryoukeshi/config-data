@@ -12,7 +12,7 @@ spring:
             enabled: true
     data:
         mongodb:
-            uri: mongodb://localhost:127.0.0.1/db
+            hostname: localhost
             database: MongoAccounts
 
 eureka:
