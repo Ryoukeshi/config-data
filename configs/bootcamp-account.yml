@@ -12,9 +12,7 @@ spring:
             enabled: true
     data:
         mongodb:
-            
-            host: localhost
-            database: MongoAccounts
+            uri: mongodb+srv://root:s3cr3t@bootcampcluster03.oicvz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 eureka:
     instance:

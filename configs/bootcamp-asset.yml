@@ -12,9 +12,7 @@ spring:
             enabled: true
     data:
         mongodb:
-            uri: mongodb://host:127.0.0.1/db
-            host: localhost
-            database: MongoAssets
+            uri: mongodb+srv://root:s3cr3t@bootcampcluster02.pi7tw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 eureka:
     instance:
@@ -23,3 +21,50 @@ eureka:
         serviceUrl:
             defaultZone: http://${eureka.instance.hostname}:8099/eureka/
     
+resilience4j.circuitbreaker:
+    instances:
+        createAssetCB:
+            registerHealthIndicator: true
+            permittedNumberOfCallsInHalfOpenState: 2
+            slidingWindowSize: 15
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 5
+            failureRateThreshold: 50
+            waitDurationInOpenState: 5s
+            eventConsumerBufferSize: 10
+        findAssetCB:
+            registerHealthIndicator: true
+            permittedNumberOfCallsInHalfOpenState: 2
+            slidingWindowSize: 15
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 5
+            failureRateThreshold: 50
+            waitDurationInOpenState: 5s
+            eventConsumerBufferSize: 10
+        findAllAssetsCB:
+            registerHealthIndicator: true
+            permittedNumberOfCallsInHalfOpenState: 2
+            slidingWindowSize: 15
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 5
+            failureRateThreshold: 50
+            waitDurationInOpenState: 5s
+            eventConsumerBufferSize: 10
+        updateAssetCB:
+            registerHealthIndicator: true
+            permittedNumberOfCallsInHalfOpenState: 2
+            slidingWindowSize: 15
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 5
+            failureRateThreshold: 50
+            waitDurationInOpenState: 5s
+            eventConsumerBufferSize: 10
+        deleteAssetCB:
+            registerHealthIndicator: true
+            permittedNumberOfCallsInHalfOpenState: 2
+            slidingWindowSize: 15
+            slidingWindowType: TIME_BASED
+            minimumNumberOfCalls: 5
+            failureRateThreshold: 50
+            waitDurationInOpenState: 5s
+            eventConsumerBufferSize: 10
