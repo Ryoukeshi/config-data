@@ -9,7 +9,7 @@ spring:
         name: bootcamp-asset
     data:
         mongodb:
-            uri: mongodb+srv://root:s3cr3t@bootcampcluster02.pi7tw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+            uri: mongodb+srv://root:s3cr3t@bootcampcluster02.pi7tw.mongodb.net/MongoAssets?retryWrites=true&w=majority
 
 eureka:
     instance:
