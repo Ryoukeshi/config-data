@@ -7,9 +7,6 @@ server:
 spring:
     application:
         name: bootcamp-asset
-    h2:
-        console:
-            enabled: true
     data:
         mongodb:
             uri: mongodb+srv://root:s3cr3t@bootcampcluster02.pi7tw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
