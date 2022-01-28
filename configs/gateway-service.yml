@@ -3,10 +3,10 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: 52.226.138.185
   client:
     serviceUrl:
-      defaultZone: http://localhost:8099/eureka/
+      defaultZone: http://${eureka.instance.hostname}:8099/eureka/
 
 spring:
   cloud:
