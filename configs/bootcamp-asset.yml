@@ -18,7 +18,7 @@ eureka:
         registerWithEureka: true
         fetchRegistry: true
         serviceUrl:
-            defaultZone: ${EUREKA_URI:http://10.0.167.215:8099/eureka}
+            defaultZone: ${EUREKA_URI:http://10.244.0.26:8099/eureka}
     
 resilience4j.circuitbreaker:
     instances:
