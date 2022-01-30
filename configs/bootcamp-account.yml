@@ -7,17 +7,14 @@ server:
 spring:
     application:
         name: bootcamp-account
-    h2:
-        console:
-            enabled: true
     data:
         mongodb:
-            uri: mongodb+srv://root:s3cr3t@bootcampcluster03.oicvz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+            uri: mongodb+srv://root:s3cr3t@bootcampcluster03.oicvz.mongodb.net/MongoAccounts?retryWrites=true&w=majority
 
 eureka:
     instance:
         hostname: 52.226.138.185
     client:
         serviceUrl:
-            defaultZone: http://${eureka.instance.hostname}:8099/eureka/
+            defaultZone: http://localhost:8099/eureka/
         
