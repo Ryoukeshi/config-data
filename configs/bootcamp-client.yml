@@ -7,9 +7,6 @@ server:
 spring:
     application:
         name: bootcamp-client
-    h2:
-        console:
-            enabled: true
     data:
         mongodb:
             uri: mongodb+srv://root:s3cr3t@bootcampcluster.zfsso.mongodb.net/MongoClients?retryWrites=true&w=majority
@@ -18,6 +15,8 @@ eureka:
     instance:
         hostname: localhost
     client:
+        registerWithEureka: true
+        fetchRegistry: true
         serviceUrl:
-            defaultZone: http://${eureka.instance.hostname}:8099/eureka/
+            defaultZone: http://localhost:8099/eureka/
     
