@@ -12,7 +12,7 @@ spring:
             enabled: true
     data:
         mongodb:
-            uri: mongodb+srv://root:s3cr3t@bootcampcluster.zfsso.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+            uri: mongodb+srv://root:s3cr3t@bootcampcluster.zfsso.mongodb.net/MongoClients?retryWrites=true&w=majority
 
 eureka:
     instance:
