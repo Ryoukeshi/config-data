@@ -6,6 +6,6 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
-      defaultZone: http://52.226.138.185:8099/eureka/
+      defaultZone: http://localhos:8099/eureka/
   server:
     waitTimeInMsWhenSyncEmpty: 100
